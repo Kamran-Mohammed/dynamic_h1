@@ -7,6 +7,7 @@ const port = process.env.PORT || 3000;
 let h1Text = "Default H1 Text";
 
 app.set("view engine", "ejs");
+app.set("views", __dirname + "/views");
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
